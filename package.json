@@ -6,14 +6,17 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:review": "yarn workspace @review-note/review dev"
+    "dev:review": "yarn workspace @review-note/review dev",
+    "g:prettier:check": "yarn workspaces foreach -Apt run prettier:check",
+    "g:prettier:write": "yarn workspaces foreach -Apt run prettier:write",
+    "preview:review": "yarn workspace @review-note/review preview"
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.17.7",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "@typescript-eslint/parser": "^5.59.9",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "prettier": "^2.8.8",
     "typescript": "5.0.2"
   },
@@ -23,5 +26,11 @@
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.15.1",
     "zustand": "^4.3.8"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn g:lint",
+      "yarn g:prettier:check"
+    ]
   }
 }
