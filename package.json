@@ -10,12 +10,14 @@
     "g:prettier:check": "yarn workspaces foreach -Apt run prettier:check",
     "g:prettier:write": "yarn workspaces foreach -Apt run prettier:write",
     "g:lint": "yarn workspaces foreach -Apt run lint",
-    "preview:review": "yarn workspace @review-note/review preview"
+    "preview:review": "yarn workspace @review-note/review preview",
+    "generate-barrels": "npx barrelsby --config barrels-config.json"
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.17.7",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "@typescript-eslint/parser": "^5.59.9",
+    "barrelsby": "^2.8.1",
     "eslint": "^8.42.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
