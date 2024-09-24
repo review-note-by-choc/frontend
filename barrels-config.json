@@ -1,0 +1,24 @@
+{
+  "delete": true,
+  "directory": [
+    "./packages/ui/src",
+    "./apps/review-note/src/components",
+    "./apps/review-note/src/pages",
+    "./apps/review-note/src/features",
+    "./apps/review-note/src/shared"
+  ],
+  "exclude": [
+    ".spec.tsx",
+    ".stories.tsx",
+    ".css.ts",
+    ".css.tsx",
+    ".style.ts",
+    ".style.tsx",
+    ".constant.ts",
+    ".constant.tsx",
+    ".test.tsx",
+    "vite-env"
+  ],
+  "location": "all",
+  "singleQuotes": true
+}
